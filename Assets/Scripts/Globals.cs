@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Globals : MonoBehaviour
 {
-    public static Strength[] finalizedStrengths = new Strength[5];
+    public static Strength[] finalizedStrengths = {null, null, null, null, null};
     public static int currentSelected = 0;
     public static int currentStrength = 0;
     public static ObjectStorage os;
@@ -35,15 +35,23 @@ public class Globals : MonoBehaviour
         return ObjectStorage.strengths[row, currentStrength].sprite;
     }
 
-    public static void updateStrengths(int id, Strength strength)
+    public static void printStrengths()
     {
-        finalizedStrengths[id] = strength;
-        Debug.Log(finalizedStrengths[id]);
+        foreach (Strength strength in finalizedStrengths) 
+        {
+            Debug.Log(strength);
+        }
+        
     }
 
     public static void SwitchScene(int sceneid)
     {
         SceneManager.LoadScene(sceneid);
+        for (int i = 0; i < finalizedStrengths.Length; i++) 
+        {
+            finalizedStrengths[i] = CharacterSelectManager.strengths[i];
+        }
+        printStrengths();
     }
 
 }

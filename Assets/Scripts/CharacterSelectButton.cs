@@ -73,20 +73,16 @@ public class CharacterSelectButton : MonoBehaviour
             Destroy(spawnedSprite);
             Initialize();
         }
+        CharacterSelectManager.updateStrengths(id, strength);
     }
 
     public void Initialize()
     {
-        spawned = Instantiate(Globals.getCurrentModelForCharacterSelection(), new Vector3(215, 344, -30), Quaternion.Euler(new Vector3(0, -90, 0)));
-        spawned.transform.localScale = new Vector3(20, 20, 20);
+        //spawned = Instantiate(Globals.getCurrentModelForCharacterSelection(), new Vector3(215, 344, -30), Quaternion.Euler(new Vector3(0, -90, 0)));
+        //spawned.transform.localScale = new Vector3(20, 20, 20);
         spawnedSprite = Instantiate(Globals.getCurrentSpriteForCharacterSelection(), background.transform, true);
-        spawnedSprite.transform.position = new Vector3(0.5691f, 5f, 0);
-    }
-
-    public void OnSwitchScene()
-    {
-        Globals.updateStrengths(id, strength);
-        Debug.Log(Globals.finalizedStrengths);
+        spawnedSprite.transform.position = new Vector3(78, 230, 0);
+        spawnedSprite.transform.localScale = new Vector3(1.607f, 1.607f, 1.607f);
     }
 
 }
