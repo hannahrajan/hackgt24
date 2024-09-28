@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] float _sensitivity = 5f;
 	CharacterController _controller;
 	float _horizontal, _vertical;
-	float _mouseX, _mouseY;
+	//float _mouseX, _mouseY;
 
 	// use this for initialization
 	void Awake()
@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		_horizontal = Input.GetAxis("Horizontal");
 		_vertical = Input.GetAxis("Vertical");
-		_mouseX = Input.GetAxis("Mouse X");
-		_mouseY = Input.GetAxis("Mouse Y");
+		//_mouseX = Input.GetAxis("Mouse X");
+		//_mouseY = Input.GetAxis("Mouse Y");
 	}
 
 	// physics simulation update - apply physics forces here
@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
 		Vector3 moveDirection = Vector3.zero;
 
 		// is the controller on the ground?
-		if (_controller.isGrounded)
-		{
+		//if (_controller.isGrounded)
+		//{
 			// feed moveDirection with input.
 			moveDirection = new Vector3(_horizontal, 0, _vertical);
 			moveDirection = transform.TransformDirection(moveDirection);
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 			moveDirection *= _speed;
 
 
-		}
+		//}
 
 		/*float turner = _mouseX * _sensitivity;
 		if (turner != 0)
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 		}*/
 
 		// apply gravity to the controller
-		moveDirection.y -= _gravity * Time.deltaTime;
+		//moveDirection.y -= _gravity * Time.deltaTime;
 
 		// make the character move
 		_controller.Move(moveDirection * Time.deltaTime);
