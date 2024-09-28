@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] float _speed = 5.0f;
+	[SerializeField] float _turnspeed = 0.1f;
+	float turnSmoothVelocity;
 	[SerializeField] float _gravity = 20.0f;
 	[SerializeField] float _sensitivity = 5f;
 	CharacterController _controller;
@@ -36,11 +38,20 @@ public class PlayerMovement : MonoBehaviour
 		//if (_controller.isGrounded)
 		//{
 			// feed moveDirection with input.
-			moveDirection = new Vector3(_horizontal, 0, _vertical);
-			moveDirection = transform.TransformDirection(moveDirection);
+			moveDirection = new Vector3(_horizontal, 0, _vertical).normalized;
 
-			// multiply it by speed.
-			moveDirection *= _speed;
+			if (moveDirection.magnitude >= 0.1f)
+			{
+				float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+				float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _turnspeed);
+				transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+				// multiply it by speed.
+				moveDirection *= _speed;
+				_controller.Move(moveDirection * Time.deltaTime);
+				//Debug.Log(angle);
+			}
+
+
 
 
 		//}
@@ -63,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
 		//moveDirection.y -= _gravity * Time.deltaTime;
 
 		// make the character move
-		_controller.Move(moveDirection * Time.deltaTime);
+
+
 	}
 }
