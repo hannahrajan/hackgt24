@@ -12,6 +12,7 @@ public class CharacterSelectButton : MonoBehaviour
     public bool isLeft;
     public TextMeshProUGUI text;
     public Canvas background;
+    public Vector3 location;
     private bool pointerEntered = false;
     private GameObject spawned;
     private GameObject spawnedSprite;
@@ -19,9 +20,8 @@ public class CharacterSelectButton : MonoBehaviour
 
     private void Start()
     {
-        strength = ObjectStorage.strengths[0, 0];
-        text.text = strength.name;
-        Initialize();
+        strength = null;
+        text.text = "";
     }
 
     private void Update()
@@ -55,7 +55,7 @@ public class CharacterSelectButton : MonoBehaviour
             Globals.currentSelected--;
             if (Globals.currentSelected < 0)
             {
-                Globals.currentSelected = 35;
+                Globals.currentSelected = 36 + Globals.currentSelected;
             }
         }
         else
@@ -81,8 +81,8 @@ public class CharacterSelectButton : MonoBehaviour
         //spawned = Instantiate(Globals.getCurrentModelForCharacterSelection(), new Vector3(215, 344, -30), Quaternion.Euler(new Vector3(0, -90, 0)));
         //spawned.transform.localScale = new Vector3(20, 20, 20);
         spawnedSprite = Instantiate(Globals.getCurrentSpriteForCharacterSelection(), background.transform, true);
-        spawnedSprite.transform.position = new Vector3(78, 230, 0);
-        spawnedSprite.transform.localScale = new Vector3(1.607f, 1.607f, 1.607f);
+        spawnedSprite.transform.position = location;
+        spawnedSprite.transform.localScale = new Vector3(1.75f, 1.75f, 1.75f);
     }
 
 }

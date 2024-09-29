@@ -322,6 +322,7 @@ MonoBehaviour:
   isLeft: 0
   text: {fileID: 2082692842}
   background: {fileID: 1490935104}
+  location: {x: 265, y: 200, z: 0}
 --- !u!114 &44508890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1197,7 @@ MonoBehaviour:
   isLeft: 1
   text: {fileID: 1447969648}
   background: {fileID: 1490935104}
+  location: {x: 615, y: 200, z: 0}
 --- !u!114 &483899759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,6 +1404,7 @@ MonoBehaviour:
   isLeft: 0
   text: {fileID: 1995837066}
   background: {fileID: 1490935104}
+  location: {x: 440, y: 200, z: 0}
 --- !u!114 &492830845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,6 +1970,7 @@ MonoBehaviour:
   isLeft: 0
   text: {fileID: 1447969648}
   background: {fileID: 1490935104}
+  location: {x: 615, y: 200, z: 0}
 --- !u!114 &950459570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,6 +2607,7 @@ MonoBehaviour:
   isLeft: 1
   text: {fileID: 1416186100}
   background: {fileID: 1490935104}
+  location: {x: 90, y: 200, z: 0}
 --- !u!114 &1433589658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3036,26 +3041,26 @@ MonoBehaviour:
   yellowS: {fileID: 919132149155446097, guid: b77311191d01e4ac58c2c998fb616f1f, type: 3}
   greenS: {fileID: 919132149155446097, guid: ee0f2f5c13b6048d186d2b52f2c674a2, type: 3}
   blueS: {fileID: 919132149155446097, guid: 8faf9a353c72c43ab9f4cbfe0276d2ef, type: 3}
-  redESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  orangeESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  yellowESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  greenESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  blueESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  redISprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  orangeISprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  yellowISprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  greenISprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  blueISprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  redRSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  orangeRSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  yellowRSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  greenRSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  blueRSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  redSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  orangeSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  yellowSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  greenSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
-  blueSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
+  redESprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  orangeESprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  yellowESprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  greenESprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  blueESprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  redISprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  orangeISprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  yellowISprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  greenISprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  blueISprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  redRSprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  orangeRSprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  yellowRSprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  greenRSprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  blueRSprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  redSSprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  orangeSSprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
+  yellowSSprite: {fileID: 4377498051535528190, guid: 8d88aea1054a240fd8ebee4b3f5bbd2b, type: 3}
+  greenSSprite: {fileID: 4355818687951064396, guid: 1826757696c0e455ca5d55522ce81943, type: 3}
+  blueSSprite: {fileID: 3817820395974884622, guid: 962760bc155d24ce0a050b9091d03aa9, type: 3}
   woodCollider: {fileID: 2153136788563659190, guid: fc966b92c990f4efd92e93694410dc11, type: 3}
   bridgeCollider: {fileID: 6608105744398270621, guid: 5beb341260bf3468d8a91d8244e7b33a, type: 3}
   plankCollider: {fileID: 5725398191392471639, guid: ca33554a806c44564aa561d2eba76961, type: 3}
@@ -3285,6 +3290,7 @@ MonoBehaviour:
   isLeft: 1
   text: {fileID: 212320818}
   background: {fileID: 1490935104}
+  location: {x: 790, y: 200, z: 0}
 --- !u!114 &1527666719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3491,6 +3497,7 @@ MonoBehaviour:
   isLeft: 1
   text: {fileID: 1995837066}
   background: {fileID: 1490935104}
+  location: {x: 440, y: 200, z: 0}
 --- !u!114 &1529141215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,6 +3786,7 @@ MonoBehaviour:
   isLeft: 0
   text: {fileID: 1416186100}
   background: {fileID: 1490935104}
+  location: {x: 90, y: 200, z: 0}
 --- !u!1 &1679155361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +3911,7 @@ MonoBehaviour:
   isLeft: 1
   text: {fileID: 2082692842}
   background: {fileID: 1490935104}
+  location: {x: 265, y: 200, z: 0}
 --- !u!114 &1679155366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4109,6 +4118,7 @@ MonoBehaviour:
   isLeft: 0
   text: {fileID: 212320818}
   background: {fileID: 1490935104}
+  location: {x: 790, y: 200, z: 0}
 --- !u!114 &1770694414
 MonoBehaviour:
   m_ObjectHideFlags: 0
