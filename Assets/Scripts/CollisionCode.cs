@@ -5,14 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class CollisionCode : MonoBehaviour
 {
+    public GameObject puzzleone;
+    public GameObject dialogue;
+    public GameObject canvas;
+    private bool instantiated;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "puzzle1")
         {
-            SceneManager.LoadScene("Puzzle1Scene");
-            Globals.returnPos = transform.position;
+            Debug.Log("COLLIDED");
+            puzzleone.gameObject.SetActive(true);
+            if (!instantiated)
+            {
+                GameObject start = Instantiate(dialogue, canvas.transform);
+                start.SetActive(true);
+                instantiated = true;
 
+            }
         }
+        /*
         else if (other.gameObject.tag == "puzzle2")
         {
             
@@ -27,6 +39,7 @@ public class CollisionCode : MonoBehaviour
 
         }
         Globals.returnPos = transform.position;
+        */
 
     }
 }

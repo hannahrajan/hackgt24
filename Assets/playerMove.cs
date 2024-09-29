@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+	public static bool canMove = true;
 	[SerializeField] float _speed = 5.0f;
 	[SerializeField] float _turnspeed = 0.1f;
 	float turnSmoothVelocity;
@@ -38,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 		//if (_controller.isGrounded)
 		//{
 			// feed moveDirection with input.
+			if (canMove)
+			{
 			moveDirection = new Vector3(_horizontal, 0, _vertical).normalized;
 
 			if (moveDirection.magnitude >= 0.1f)
@@ -54,27 +57,27 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-		//}
+			//}
 
-		/*float turner = _mouseX * _sensitivity;
-		if (turner != 0)
-		{
-			// action on mouse moving right
-			transform.eulerAngles += new Vector3(0, turner, 0);
+			/*float turner = _mouseX * _sensitivity;
+			if (turner != 0)
+			{
+				// action on mouse moving right
+				transform.eulerAngles += new Vector3(0, turner, 0);
+			}
+
+			float looker = -_mouseY * _sensitivity;
+			if (looker != 0)
+			{
+				// action on mouse moving right
+				transform.eulerAngles += new Vector3(looker, 0, 0);
+			}*/
+
+			// apply gravity to the controller
+			//moveDirection.y -= _gravity * Time.deltaTime;
+
+			// make the character move
 		}
-
-		float looker = -_mouseY * _sensitivity;
-		if (looker != 0)
-		{
-			// action on mouse moving right
-			transform.eulerAngles += new Vector3(looker, 0, 0);
-		}*/
-
-		// apply gravity to the controller
-		//moveDirection.y -= _gravity * Time.deltaTime;
-
-		// make the character move
-
 
 	}
 }
