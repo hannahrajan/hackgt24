@@ -8,7 +8,7 @@ public class CollisionCode : MonoBehaviour
     public GameObject puzzleone;
     public GameObject dialogue;
     public GameObject canvas;
-    private bool instantiated;
+    public static bool[] instantiated = new bool[6];
 
     public void OnTriggerEnter(Collider other)
     {
@@ -16,12 +16,28 @@ public class CollisionCode : MonoBehaviour
         {
             Debug.Log("COLLIDED");
             puzzleone.gameObject.SetActive(true);
-            if (!instantiated)
+            if (!instantiated[0])
             {
                 GameObject start = Instantiate(dialogue, canvas.transform);
                 start.SetActive(true);
-                instantiated = true;
+                instantiated[0] = true;
 
+            }
+        }
+
+        int index = 1;
+        foreach (Strength strength in Globals.finalizedStrengths)
+        {
+            if (other.gameObject.tag == strength.colliderTag)
+            {
+                if (!instantiated[index])
+                {
+                    Debug.Log("COLLIDED WITH " + strength.colliderTag.ToUpper());
+                    Globals.currentStrength = index - 1;
+                    GameObject start = Instantiate(dialogue, canvas.transform);
+                    start.SetActive(true);
+                    instantiated[index] = true;
+                }
             }
         }
         /*

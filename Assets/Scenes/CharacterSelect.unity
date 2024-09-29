@@ -3056,6 +3056,9 @@ MonoBehaviour:
   yellowSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
   greenSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
   blueSSprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
+  woodCollider: {fileID: 2153136788563659190, guid: fc966b92c990f4efd92e93694410dc11, type: 3}
+  bridgeCollider: {fileID: 6608105744398270621, guid: 5beb341260bf3468d8a91d8244e7b33a, type: 3}
+  plankCollider: {fileID: 5725398191392471639, guid: ca33554a806c44564aa561d2eba76961, type: 3}
 --- !u!1 &1493571621
 GameObject:
   m_ObjectHideFlags: 0
