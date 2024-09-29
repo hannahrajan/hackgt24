@@ -10,6 +10,7 @@ public class Globals : MonoBehaviour
     public static int currentSelected = 0;
     public static int currentStrength = 0;
     public static ObjectStorage os;
+    public static Vector3 returnPos = new Vector3(0, 0, 0);
 
     public void Start()
     {
