@@ -36,6 +36,12 @@ public class Globals : MonoBehaviour
         return ObjectStorage.strengths[row, currentStrength].sprite;
     }
 
+    public static Strength getCurrentStrength()
+    {
+        int row = currentSelected / 9;
+        return ObjectStorage.strengths[row, currentStrength];
+    }
+
     public static void printStrengths()
     {
         foreach (Strength strength in finalizedStrengths) 

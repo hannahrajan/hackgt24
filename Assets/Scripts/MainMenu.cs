@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    private bool madeCharacters = false;
     public void PlayGame() {
         SceneManager.LoadScene("MainLevelScene");
     }
@@ -15,7 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     public void CharacterSelection()
     {
-        SceneManager.LoadScene("CharacterSelectionScene");
+        SceneManager.LoadScene("CharacterSelect");
     }
     public void QuitGame()
     {

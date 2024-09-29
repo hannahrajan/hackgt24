@@ -8,6 +8,9 @@ public class CollisionCode : MonoBehaviour
     public GameObject puzzleone;
     public GameObject dialogue;
     public GameObject canvas;
+    public GameObject wood;
+    public GameObject planks;
+    public GameObject bridge;
     public static bool[] instantiated = new bool[6];
 
     public void OnTriggerEnter(Collider other)
@@ -21,25 +24,32 @@ public class CollisionCode : MonoBehaviour
                 GameObject start = Instantiate(dialogue, canvas.transform);
                 start.SetActive(true);
                 instantiated[0] = true;
+                StartCoroutine(WaitToEnable());
+                wood.SetActive(true);
+                planks.SetActive(true);
+                bridge.SetActive(true);
 
             }
-        }
-
-        int index = 1;
-        foreach (Strength strength in Globals.finalizedStrengths)
+        } else
         {
-            if (other.gameObject.tag == strength.colliderTag)
+            int index = 1;
+            foreach (Strength strength in Globals.finalizedStrengths)
             {
-                if (!instantiated[index])
+                if (other.gameObject.tag == strength.colliderTag)
                 {
-                    Debug.Log("COLLIDED WITH " + strength.colliderTag.ToUpper());
-                    Globals.currentStrength = index - 1;
-                    GameObject start = Instantiate(dialogue, canvas.transform);
-                    start.SetActive(true);
-                    instantiated[index] = true;
+                    if (!instantiated[index])
+                    {
+                        Debug.Log("COLLIDED WITH " + strength.colliderTag.ToUpper());
+                        Globals.currentStrength = index - 1;
+                        Debug.Log(Globals.currentStrength);
+                        GameObject start = Instantiate(dialogue, canvas.transform);
+                        start.SetActive(true);
+                        instantiated[index] = true;
+                    }
                 }
             }
         }
+
         /*
         else if (other.gameObject.tag == "puzzle2")
         {
@@ -57,5 +67,10 @@ public class CollisionCode : MonoBehaviour
         Globals.returnPos = transform.position;
         */
 
+    }
+
+    IEnumerator WaitToEnable()
+    {
+        yield return new WaitForSeconds(5f);
     }
 }

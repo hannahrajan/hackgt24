@@ -14,15 +14,18 @@ public class DialogueThing : MonoBehaviour
     {
         if (Globals.currentStrength != -1)
         {
-
+            Debug.Log(Globals.getCurrentStrength());
             dialogue = new string[10];
             int index = 0;
-            foreach (string key in Globals.finalizedStrengths[Globals.currentStrength].dialogue.Keys)
+            foreach (string key in Globals.getCurrentStrength().dialogue.Keys)
             {
                 foreach (string talk in key.Split("."))
                 {
-                    dialogue[index] = talk;
-                    index++;
+                    if (!talk.Equals(""))
+                    {
+                        dialogue[index] = talk;
+                        index++;
+                    }
                 }
             }
         }
