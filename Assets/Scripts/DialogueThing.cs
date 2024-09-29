@@ -6,11 +6,14 @@ using UnityEngine;
 public class DialogueThing : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    string[] blorb = { "Text1", "Text2", "Text3", "Text4", "Text5" };
+    public GameObject selfObject;
+    string[] blorb = { "However, it's flowing pretty calmly.", "To make it across the river, you have several ways to approach the task."};
+    string starter = "You have been walking for a while and come to a pretty deep river.";
     int count = 0;
     private void Start()
     {
-        text.text = "";
+        text.text = starter;
+        PlayerMovement.canMove = false;
     }
 
 
@@ -21,7 +24,8 @@ public class DialogueThing : MonoBehaviour
 
         } else
         {
-            text.text = "";
+            Destroy(selfObject);
+            PlayerMovement.canMove = true;
         }  
         
     }
