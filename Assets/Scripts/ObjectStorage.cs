@@ -64,6 +64,11 @@ public class ObjectStorage : MonoBehaviour
         {"Analytical", "Context", "Futuristic", "Ideation", "Input", "Intellection", "Learner", "Strategic", "NULL"}
     };
 
+    public static Dictionary<string, Dictionary<string, int[]>> allDialoguePoints =
+    {
+
+    };
+
     public static Strength[,] strengths = new Strength[4, 9];
 
     public void Start()
@@ -133,6 +138,8 @@ public class ObjectStorage : MonoBehaviour
                 //Debug.Log(strengths[y, x]);
             }
         }
+
+        DialogueManager.FormatCSVFile();
 
 
     }

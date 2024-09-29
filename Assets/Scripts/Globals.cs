@@ -14,7 +14,7 @@ public class Globals : MonoBehaviour
 
     public void Start()
     {
-
+        
     }
 
     public static Strength[] getRow(int rowNumber)
