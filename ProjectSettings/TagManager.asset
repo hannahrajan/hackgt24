@@ -8,6 +8,9 @@ TagManager:
   - puzzle2
   - puzzle3
   - puzzleoneshow
+  - bridge
+  - wood
+  - planks
   layers:
   - Default
   - TransparentFX

@@ -9,15 +9,18 @@ public class Strength
     public string name;
     public GameObject model;
     public GameObject sprite;
-    public string dialogue;
+    public string colliderTag;
+    public Dictionary<string, int[]> dialogue;
     public Dictionary<string, int> points;
+    private bool instantiated = false;
 
-    public Strength(int id, string name, GameObject model, GameObject sprite, string dialogue)
+    public Strength(int id, string name, GameObject model, GameObject sprite, string colliderTag, Dictionary<string, int[]> dialogue)
     {
         this.id = id;
         this.name = name;
         this.model = model;
         this.sprite = sprite;
+        this.colliderTag = colliderTag;
         this.dialogue = dialogue;
         points = new Dictionary<string, int>
         {
@@ -29,13 +32,33 @@ public class Strength
         };
     }
 
-    public void addPoints(int time, int like, int health, int fulfill, int create)
+
+    public void addPoints(int puzzle)
     {
-        points["Time"] += time;
-        points["Likeability"] += like;
-        points["Health / Wellbeing"] += health;
-        points["Fulfillment / Esteem"] += fulfill;
-        points["Creativity"] += create;
+        int index = 0;
+        foreach (int[] val in dialogue.Values)
+        {
+            if (puzzle == index)
+            {
+                foreach (int item in val){
+                    foreach (var key in points.Keys)
+                    {
+                        points[key] += item;
+                    }
+                }
+            }
+        }
+            
+    }
+
+    private string dialoguePrint()
+    {
+        string returnStr = "";
+        foreach (var key in dialogue.Keys)
+        {
+            returnStr = key + ": " + dialogue[key] + ", ";
+        }
+        return returnStr.Substring(0, returnStr.Length - 2);
     }
 
     public override string ToString()
@@ -43,6 +66,8 @@ public class Strength
         return id + " {" +
             name + ", Model: " +
             model.name + ", Sprite: " +
-            sprite.name + ", ";
+            sprite.name + ", Collider: " +
+            colliderTag + ", Dialogue: " +
+            dialoguePrint();
     }
 }

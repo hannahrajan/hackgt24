@@ -52,6 +52,7 @@ public class Globals : MonoBehaviour
         {
             finalizedStrengths[i] = CharacterSelectManager.strengths[i];
         }
+        currentStrength = -1;
         printStrengths();
     }
 
