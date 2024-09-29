@@ -3026,16 +3026,16 @@ MonoBehaviour:
   yellowI: {fileID: 919132149155446097, guid: 0d6e23a7ba3f64c1b9def9441c801602, type: 3}
   greenI: {fileID: 919132149155446097, guid: abbf09d36949344b1a716f7d9fc86022, type: 3}
   blueI: {fileID: 919132149155446097, guid: 8a1540723a8df47c699f65beb3465c45, type: 3}
-  redR: {fileID: 919132149155446097, guid: 47ccb2f4b07b948f09aa6ed426a5a7dc, type: 3}
-  orangeR: {fileID: 919132149155446097, guid: 6b133ddc51ca7423d9af71f5d20015cb, type: 3}
-  yellowR: {fileID: 919132149155446097, guid: 46355b99197924dfdae22362558172e4, type: 3}
-  greenR: {fileID: 919132149155446097, guid: de278fb4a6fe04087b4dc1b1d782f735, type: 3}
-  blueR: {fileID: 919132149155446097, guid: ac43631b31759404caee0255f881900e, type: 3}
-  redS: {fileID: 919132149155446097, guid: f5e506872275942c5954fed66eb71eec, type: 3}
-  orangeS: {fileID: 919132149155446097, guid: 97597cf7864384a5d8bebf6445678a3a, type: 3}
-  yellowS: {fileID: 919132149155446097, guid: 0d6e23a7ba3f64c1b9def9441c801602, type: 3}
-  greenS: {fileID: 919132149155446097, guid: abbf09d36949344b1a716f7d9fc86022, type: 3}
-  blueS: {fileID: 919132149155446097, guid: 8a1540723a8df47c699f65beb3465c45, type: 3}
+  redR: {fileID: 919132149155446097, guid: 634dfb63c26444ff797ddf33baeac0b1, type: 3}
+  orangeR: {fileID: 919132149155446097, guid: 9c1ecc5295b3a409ab0aaa6026b590c2, type: 3}
+  yellowR: {fileID: 919132149155446097, guid: d0d68deaaec4a4550ac692f0d4453172, type: 3}
+  greenR: {fileID: 919132149155446097, guid: 1a4f969f8116143b59902f806f2e1305, type: 3}
+  blueR: {fileID: 919132149155446097, guid: b84c361332c004682af49edc710e4842, type: 3}
+  redS: {fileID: 919132149155446097, guid: 15ac0ab314e6847d290e5fc6c8acf36b, type: 3}
+  orangeS: {fileID: 919132149155446097, guid: 98b24c50b010d418699e3d8fa12d2526, type: 3}
+  yellowS: {fileID: 919132149155446097, guid: b77311191d01e4ac58c2c998fb616f1f, type: 3}
+  greenS: {fileID: 919132149155446097, guid: ee0f2f5c13b6048d186d2b52f2c674a2, type: 3}
+  blueS: {fileID: 919132149155446097, guid: 8faf9a353c72c43ab9f4cbfe0276d2ef, type: 3}
   redESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
   orangeESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
   yellowESprite: {fileID: 5683406050047465698, guid: 60b747663929c4c539cc460621b86c17, type: 3}
